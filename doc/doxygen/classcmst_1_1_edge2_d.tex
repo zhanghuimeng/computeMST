@@ -1,0 +1,208 @@
+\hypertarget{classcmst_1_1_edge2_d}{}\section{cmst::Edge2D Class Reference}
+\label{classcmst_1_1_edge2_d}\index{cmst::Edge2D@{cmst::Edge2D}}
+
+
+Inheritance diagram for cmst::Edge2D:
+% FIG 0
+
+
+Collaboration diagram for cmst::Edge2D:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcmst_1_1_edge2_d_a5af466b468749d363692f16de84a85d5}{Edge2D} ()
+\item 
+\hyperlink{classcmst_1_1_edge2_d_a0d1166315f84757395e889d3225e2ae0}{Edge2D} (const \hyperlink{classcmst_1_1_point2_d}{Point2D} \&\hyperlink{classcmst_1_1_edge2_d_ad77218c63818fe92f43033ba1487ab89}{start}, const \hyperlink{classcmst_1_1_point2_d}{Point2D} \&\hyperlink{classcmst_1_1_edge2_d_af02d43d8344759ac3709d318e26cdcee}{end})
+\item 
+double \hyperlink{classcmst_1_1_edge2_d_adaa859c8f6b412e1174abe8d8b429ce9}{length} () const 
+\item 
+\hyperlink{classcmst_1_1_point2_d}{Point2D} \hyperlink{classcmst_1_1_edge2_d_ad77218c63818fe92f43033ba1487ab89}{start} () const 
+\item 
+\hyperlink{classcmst_1_1_point2_d}{Point2D} \hyperlink{classcmst_1_1_edge2_d_af02d43d8344759ac3709d318e26cdcee}{end} () const 
+\item 
+bool \hyperlink{classcmst_1_1_edge2_d_ab710dba1b2f0a4c74d01a7b2c1211efa}{operator$<$} (const \hyperlink{classcmst_1_1_edge2_d}{Edge2D} \&right) const 
+\begin{DoxyCompactList}\small\item\em Compares edges by length. \end{DoxyCompactList}\item 
+bool \hyperlink{classcmst_1_1_edge2_d_a4370b0ab916b4fd8d5ff98733ae57116}{operator==} (const \hyperlink{classcmst_1_1_edge2_d}{Edge2D} \&right) const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classcmst_1_1_edge2_d_aeb88dc66750f6c7967de0918e906abf4}{swap\_points} ()
+\begin{DoxyCompactList}\small\item\em Swaps the start and end point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcmst_1_1_point2_d}{Point2D} \hyperlink{classcmst_1_1_edge2_d_a8c0ca77824a84a48c714aaec5da72ad7}{m\_start}
+\begin{DoxyCompactList}\small\item\em Start point. \end{DoxyCompactList}\item 
+\hyperlink{classcmst_1_1_point2_d}{Point2D} \hyperlink{classcmst_1_1_edge2_d_a26aabda4fcc506ae340392e78f92e49b}{m\_end}
+\begin{DoxyCompactList}\small\item\em End point. \end{DoxyCompactList}\item 
+double \hyperlink{classcmst_1_1_edge2_d_ab461fb636aa7f76af613c63c681c186e}{m\_length}
+\begin{DoxyCompactList}\small\item\em Length. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std::ostream \& \hyperlink{classcmst_1_1_edge2_d_ae312c205375d240b1c8bc889f2c1c55e}{operator$<$$<$} (std::ostream \&out, const \hyperlink{classcmst_1_1_edge2_d}{Edge2D} \&e)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Stores edges in 2D plane.
+
+The start and end points are stored in the edge. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{cmst::Edge2D@{cmst::Edge2D}!Edge2D@{Edge2D}}
+\index{Edge2D@{Edge2D}!cmst::Edge2D@{cmst::Edge2D}}
+\subsubsection[{\texorpdfstring{Edge2D()}{Edge2D()}}]{\setlength{\rightskip}{0pt plus 5cm}cmst::Edge2D::Edge2D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_edge2_d_a5af466b468749d363692f16de84a85d5}{}\label{classcmst_1_1_edge2_d_a5af466b468749d363692f16de84a85d5}
+\index{cmst::Edge2D@{cmst::Edge2D}!Edge2D@{Edge2D}}
+\index{Edge2D@{Edge2D}!cmst::Edge2D@{cmst::Edge2D}}
+\subsubsection[{\texorpdfstring{Edge2D(const Point2D \&start, const Point2D \&end)}{Edge2D(const Point2D &start, const Point2D &end)}}]{\setlength{\rightskip}{0pt plus 5cm}cmst::Edge2D::Edge2D (
+\begin{DoxyParamCaption}
+\item[{const {\bf Point2D} \&}]{start, }
+\item[{const {\bf Point2D} \&}]{end}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_edge2_d_a0d1166315f84757395e889d3225e2ae0}{}\label{classcmst_1_1_edge2_d_a0d1166315f84757395e889d3225e2ae0}
+Constructor
+
+Calculates the length. 
+
+Here is the call graph for this function:
+% FIG 2
+
+
+
+
+\subsection{Member Function Documentation}
+\index{cmst::Edge2D@{cmst::Edge2D}!end@{end}}
+\index{end@{end}!cmst::Edge2D@{cmst::Edge2D}}
+\subsubsection[{\texorpdfstring{end() const }{end() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Point2D} cmst::Edge2D::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_edge2_d_af02d43d8344759ac3709d318e26cdcee}{}\label{classcmst_1_1_edge2_d_af02d43d8344759ac3709d318e26cdcee}
+Returns the end point.
+
+\begin{DoxyReturn}{Returns}
+end point 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function:
+% FIG 3
+
+
+\index{cmst::Edge2D@{cmst::Edge2D}!length@{length}}
+\index{length@{length}!cmst::Edge2D@{cmst::Edge2D}}
+\subsubsection[{\texorpdfstring{length() const }{length() const }}]{\setlength{\rightskip}{0pt plus 5cm}double cmst::Edge2D::length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_edge2_d_adaa859c8f6b412e1174abe8d8b429ce9}{}\label{classcmst_1_1_edge2_d_adaa859c8f6b412e1174abe8d8b429ce9}
+Returns the length of the edge.
+
+\begin{DoxyReturn}{Returns}
+length of the edge 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function:
+% FIG 4
+
+
+\index{cmst::Edge2D@{cmst::Edge2D}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!cmst::Edge2D@{cmst::Edge2D}}
+\subsubsection[{\texorpdfstring{operator$<$(const Edge2D \&right) const }{operator<(const Edge2D &right) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool cmst::Edge2D::operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Edge2D} \&}]{right}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_edge2_d_ab710dba1b2f0a4c74d01a7b2c1211efa}{}\label{classcmst_1_1_edge2_d_ab710dba1b2f0a4c74d01a7b2c1211efa}
+
+
+Compares edges by length. 
+
+\index{cmst::Edge2D@{cmst::Edge2D}!operator==@{operator==}}
+\index{operator==@{operator==}!cmst::Edge2D@{cmst::Edge2D}}
+\subsubsection[{\texorpdfstring{operator==(const Edge2D \&right) const }{operator==(const Edge2D &right) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool cmst::Edge2D::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Edge2D} \&}]{right}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_edge2_d_a4370b0ab916b4fd8d5ff98733ae57116}{}\label{classcmst_1_1_edge2_d_a4370b0ab916b4fd8d5ff98733ae57116}
+Compares \hyperlink{classcmst_1_1_edge2_d}{cmst::Edge2D} by start point and end point.
+
+Take the \hyperlink{classcmst_1_1_edge2_d}{cmst::Edge2D} as undirected. \index{cmst::Edge2D@{cmst::Edge2D}!start@{start}}
+\index{start@{start}!cmst::Edge2D@{cmst::Edge2D}}
+\subsubsection[{\texorpdfstring{start() const }{start() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Point2D} cmst::Edge2D::start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_edge2_d_ad77218c63818fe92f43033ba1487ab89}{}\label{classcmst_1_1_edge2_d_ad77218c63818fe92f43033ba1487ab89}
+Returns the start point.
+
+\begin{DoxyReturn}{Returns}
+start point 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function:
+% FIG 5
+
+
+\index{cmst::Edge2D@{cmst::Edge2D}!swap\_points@{swap\_points}}
+\index{swap\_points@{swap\_points}!cmst::Edge2D@{cmst::Edge2D}}
+\subsubsection[{\texorpdfstring{swap\_points()}{swap_points()}}]{\setlength{\rightskip}{0pt plus 5cm}void cmst::Edge2D::swap\_points (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classcmst_1_1_edge2_d_aeb88dc66750f6c7967de0918e906abf4}{}\label{classcmst_1_1_edge2_d_aeb88dc66750f6c7967de0918e906abf4}
+
+
+Swaps the start and end point. 
+
+
+
+Here is the caller graph for this function:
+% FIG 6
+
+
+
+
+\subsection{Friends And Related Function Documentation}
+\index{cmst::Edge2D@{cmst::Edge2D}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!cmst::Edge2D@{cmst::Edge2D}}
+\subsubsection[{\texorpdfstring{operator$<$$<$}{operator<<}}]{\setlength{\rightskip}{0pt plus 5cm}std::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std::ostream \&}]{out, }
+\item[{const {\bf Edge2D} \&}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classcmst_1_1_edge2_d_ae312c205375d240b1c8bc889f2c1c55e}{}\label{classcmst_1_1_edge2_d_ae312c205375d240b1c8bc889f2c1c55e}
+Prints information about the edge.
+
+Prints the length, start point and end point. 
+
+\subsection{Member Data Documentation}
+\index{cmst::Edge2D@{cmst::Edge2D}!m\_end@{m\_end}}
+\index{m\_end@{m\_end}!cmst::Edge2D@{cmst::Edge2D}}
+\subsubsection[{\texorpdfstring{m\_end}{m_end}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Point2D} cmst::Edge2D::m\_end\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classcmst_1_1_edge2_d_a26aabda4fcc506ae340392e78f92e49b}{}\label{classcmst_1_1_edge2_d_a26aabda4fcc506ae340392e78f92e49b}
+
+
+End point. 
+
+\index{cmst::Edge2D@{cmst::Edge2D}!m\_length@{m\_length}}
+\index{m\_length@{m\_length}!cmst::Edge2D@{cmst::Edge2D}}
+\subsubsection[{\texorpdfstring{m\_length}{m_length}}]{\setlength{\rightskip}{0pt plus 5cm}double cmst::Edge2D::m\_length\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classcmst_1_1_edge2_d_ab461fb636aa7f76af613c63c681c186e}{}\label{classcmst_1_1_edge2_d_ab461fb636aa7f76af613c63c681c186e}
+
+
+Length. 
+
+\index{cmst::Edge2D@{cmst::Edge2D}!m\_start@{m\_start}}
+\index{m\_start@{m\_start}!cmst::Edge2D@{cmst::Edge2D}}
+\subsubsection[{\texorpdfstring{m\_start}{m_start}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Point2D} cmst::Edge2D::m\_start\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classcmst_1_1_edge2_d_a8c0ca77824a84a48c714aaec5da72ad7}{}\label{classcmst_1_1_edge2_d_a8c0ca77824a84a48c714aaec5da72ad7}
+
+
+Start point. 
+

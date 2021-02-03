@@ -1,0 +1,313 @@
+\documentclass[oneside]{book}
+\usepackage[bookmarks=true, colorlinks, linkcolor=gray]{hyperref}
+\usepackage[top=1in, bottom=1in, left=1.25in, right=1.25in]{geometry}
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{color}
+
+% Packages required by doxygen
+\usepackage{fixltx2e}
+\usepackage{calc}
+\usepackage{doxygen}
+\usepackage[export]{adjustbox} % also loads graphicx
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{makeidx}
+\usepackage{multicol}
+\usepackage{multirow}
+\PassOptionsToPackage{warn}{textcomp}
+\usepackage{textcomp}
+\usepackage[nointegrals]{wasysym}
+\usepackage[table]{xcolor}
+
+
+% \renewcommand\thesection{\arabic{section}}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  basicstyle=\footnotesize\ttfamily,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen}\ttfamily,    % comment style
+  frame=single,	                   % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=C++,                    % the language of the code
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,	                   % sets default tabsize to 2 spaces
+}
+
+\usepackage{caption}
+\captionsetup{labelsep=space,justification=centering,font={bf},singlelinecheck=off,skip=4pt,position=top}
+
+% Add search path
+\makeatletter
+\providecommand*\input@path{}
+\newcommand*\addinputpath[1]{%
+  \expandafter\def\expandafter\input@path
+  \expandafter{\input@path#1}}%
+\addinputpath{{doxygen/}}
+\makeatother
+
+\graphicspath{{doxygen/}{UML/}{interface/}}
+
+% 章节不分页
+\usepackage{xpatch}
+\makeatletter
+\xpatchcmd{\chapter}
+  {\if@openright\cleardoublepage\else\clearpage\fi}{\par\relax}
+  {}{}
+\makeatother
+
+\makeatletter
+\xpatchcmd{\part}
+  {\if@openright\cleardoublepage\else\clearpage\fi}{\par\relax}
+  {}{}
+\makeatother
+
+\title{\textbf{Individual Project 2\\ Constructing Minimum Spanning Trees\\ Software Design Document}}
+\author{Zhang Huimeng, 2015011280}
+
+\begin{document}
+
+\maketitle
+\author
+\clearpage
+
+\tableofcontents
+\clearpage
+
+
+\part{Introduction}
+
+    \chapter{Purpose}
+
+        This software design document describes the architecture and system design of project ComputeMST. This is a homework of Fundamentals of Object-Oriented Programming class, Spring 2016. The homework requirement is as follows:
+
+         (II) Project: On Constructing Minimum Spanning Trees (Difficulty: 1.1)
+
+        Requirements and TIPS:
+
+        (1) Implement the MST algorithm based on Voronoi diagram for computing Euclidean minimum spanning trees in 2D plane.
+
+        (2) Please refer to \href{http://www.cs.princeton.edu/courses/archive/spr07/cos226/lectures/mst.pdf}{the following link} for MST construction algorithms. Either Prim's or Kruskal's algorithm is ok. Please refer to Page 39 for the idea of using Voronoi for MST computation.
+
+        (3) Use the \href{http://www.cgal.org/}{CGAL Library} for constructing the Voronoi diagram and Delaunay triangulation.
+
+        (4) Randomly generate 5 different testcases with more than 5000 points without duplicates to test the implemented method.
+
+        (5) It is suggested that a validity checking function be implemented to verify the experimental results are correct. For example, you may directly apply Prim's or Kruskal's MST algorithm on the testcase to verify that the MST trees are correct.
+
+        (6) Report the statistics of the experimental results, e.g., total runtime, total number of points, total length of the MST edges, etc. Figures and tables on the experimental results are welcome.
+
+        (7) [This is not mandatory to finish, but it is a challenging topic] Again, can you compute the top K ($1 <= K <= 20$) minimum spanning trees?
+
+    \chapter{Scope}
+
+        I implemented the first six requirements of the homework, mainly using CGAL and Kruskal's MST algorithm. The program can load input from file or randomly generate input for itself; it has a GUI interface and can print results of the MST computation to file.
+
+\clearpage
+\part{System Overview}
+
+    The program can compute Delaunay triangulation (via CGAL library) and MST for up to 10000 points in a 2-dimensional plane in 1 or 2 seconds. It can output the result to file. Also, it has a interface written with Freeglut.
+
+\clearpage
+\part{System Architecture}
+
+    \chapter{Architectural Design} % 将整个系统划分为功能模块，介绍每个模块之间的功能和相互关系
+
+        The program can be divided into three parts: the Basics part, the Computational part and the Display part.
+
+        \begin{center}
+        \includegraphics[width=\linewidth / 3]{main.png}
+        \end{center}
+
+        The basics part provides some useful tools for the Computational part, like statistics and timer.
+
+        The computational part does the computation, and interacts with the Display part to provide a workable interface.
+
+        The display part deals with the interface and user input.
+
+    \chapter{Decomposition Description}
+
+        \section{Basics}
+
+            The \hyperlink{classcmst_1_1_stat}{Stat} class deals with statistics. It receives data in the form of floating-point number and can work continuously. It calculates the mean, maximum, minimum and standard deviation of the data.
+
+            \begin{center}
+            \includegraphics[width=\linewidth / 3]{classcmst_1_1_stat__coll__graph}
+            \end{center}
+
+            The \hyperlink{classcmst_1_1_timer}{Timer} class deals with timing. It uses the clock() function.
+
+            \begin{center}
+            \includegraphics[width=\linewidth / 3]{classcmst_1_1_timer__coll__graph}
+            \end{center}
+
+        \section{Computational}
+
+            The \hyperlink{classcmst_1_1_point2_d}{Point2D}, \hyperlink{classcmst_1_1_edge2_d}{Edge2D} and \hyperlink{classcmst_1_1_index_edge2_d}{IndexEdge2D} classes are the basic 2-dimensional computational geometry classes.
+
+            \begin{center}
+            \includegraphics[width=\linewidth / 3]{classcmst_1_1_edge2_d__inherit__graph}
+            \end{center}
+
+            \begin{center}
+            \includegraphics[width=\linewidth / 3]{classcmst_1_1_point2_d__coll__graph}
+            \end{center}
+
+            The \hyperlink{classcmst_1_1_graph2_d}{Graph2D} class deals with all the computations. The Delaunay triangulation and MST are computed in the constructor. This class also provides drawing functions that draw the graph by Freeglut.
+
+            \begin{center}
+            \includegraphics[width=\linewidth / 3]{classcmst_1_1_graph2_d__coll__graph}
+            \end{center}
+
+            It also contains a nested struct, \hyperlink{structcmst_1_1_graph2_d_1_1_s_t}{Graph2D::ST} that stores spanning trees of the graph. If I had time, I would have implemented the k-top spanning tree calculation.
+
+        \section{Display}
+
+            The Display part contains the Freeglut window and pop-up menu management functions, as well as the \hyperlink{classcmst_1_1_window}{Window} class that manages the window. Here is the UML diagram of this class:
+
+            \begin{center}
+            \includegraphics[width=\linewidth / 2]{classcmst_1_1_window__coll__graph}
+            \end{center}
+
+
+\clearpage
+\part{Data Design}
+
+    \chapter{Data Description} % data structure, data storage, process and organization
+
+        The program uses very simple ways of managing data: most data is stored in vectors and arrays.
+
+\clearpage
+\part{Human Interface Design}
+
+    \chapter{Overview of Human Interface}
+
+        Here is a screen shot of the main screen:
+
+        \begin{center}
+        \includegraphics[width=\linewidth]{main_interface.png}
+        \end{center}
+
+        On the left is the Freeglut window, and the console is on the right. If you right-click on the glut window, a pop-up window will appear, as in the screenshot above. The console prints information about graphs and MSTs being displayed in the window.
+
+        \section{Main Menu}
+
+            \begin{center}
+            \includegraphics[width=\linewidth / 3]{main_menu.png}
+            \end{center}
+
+            As can be seen from the screenshot above, main menu has 7 menu entries:
+            \begin{description}
+              \item[Load] This option loads point information from a file to construct the graph. There are some requirements of the input. You have to provide the full path to the input file.
+              \item[Generate] See \ref{'Generate' sub-Menu}.
+              \item[Show] See \ref{'Show' sub-Menu}.
+              \item[Run Test] See \ref{'Run Test' sub-Menu}.
+              \item[Validate] Run the validating naive MST algorithm for the graph.
+              \item[Print] Print information to graph.txt.
+              \item[Quit] Exit the program.
+            \end{description}
+
+        \section{'Generate' sub-Menu}
+        \label{'Generate' sub-Menu}
+
+            \begin{center}
+            \includegraphics[width=\linewidth / 3]{generate_menu.png}
+            \end{center}
+
+            This sub-menu has 5 menu entries:
+            \begin{description}
+              \item[Generate(2-10)] Generate 2-10 points.
+              \item[Generate(11-100)] Generate 11-100 points.
+              \item[Generate(101-1000)] Generate 101-1000 points.
+              \item[Generate(1001-5000)] Generate 1001-5000 points.
+              \item[Generate(5001-10000)] Generate 5001-10000 points.
+            \end{description}
+
+        \section{'Show' sub-Menu}
+        \label{'Show' sub-Menu}
+
+            \begin{center}
+            \includegraphics[width=\linewidth / 3]{show_menu.png}
+            \end{center}
+
+            This sub-menu has 4 menu entries:
+            \begin{description}
+              \item[Points] Whether the points are drawn.
+              \item[Delaunay] Whether the Delaunay triangulation is drawn.
+              \item[MST] Whether the MST is draw.
+              \item[ST] Whether the STs are drawn. These include the MST calculated in validating and other spanning trees.
+            \end{description}
+
+        \section{'Run Test' sub-Menu}
+        \label{'Run Test' sub-Menu}
+
+            \begin{center}
+            \includegraphics[width=\linewidth / 3]{test_menu.png}
+            \end{center}
+
+            This sub-menu has 2 menu entries:
+            \begin{description}
+              \item[Test(5)] Run a test of 5 graphs, each having 10000 points.
+              \item[Test(20)] Run a test of 20 graphs, each having 10000 points.
+            \end{description}
+
+            After a test is run, you can use left and right arrow keys to move through test graphs.
+
+    \chapter{Screen Images}
+
+        \begin{figure}[H]
+          \centering
+          % Requires \usepackage{graphicx}
+          \includegraphics[width=\linewidth]{after_generating}\\
+          \caption{After a graph is generated}\label{after_generating}
+        \end{figure}
+
+        Delaunay triangulation is drawn in thin blue lines, and MST is drawn in thick pink lines. Spanning trees are drawn in dotted lines.
+
+        \begin{figure}[H]
+          \centering
+          % Requires \usepackage{graphicx}
+          \includegraphics[width=\linewidth]{after_test}\\
+          \caption{After running a test}\label{after_test}
+        \end{figure}
+
+        In the above screenshot, the points and spanning trees are not drawn.
+
+        \begin{figure}[H]
+          \centering
+          % Requires \usepackage{graphicx}
+          \includegraphics[width=\linewidth]{after_validate}\\
+          \caption{After running a validate}\label{after_validate}
+        \end{figure}
+
+        In the above screenshot, the Delaunay triangulation and MST are not drawn.
+
+\clearpage
+\part{Design Patterns}
+
+    \chapter{Singleton}
+
+        This program uses Singleton pattern in \hyperlink{classcmst_1_1_window}{Window}. There can only be one main window in one program.
+
+\clearpage
+\part{Component Design}
+\input{Component_Design}
+
+
+
+\end{document}

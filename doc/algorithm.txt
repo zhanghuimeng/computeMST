@@ -1,0 +1,15 @@
+A T-exchange is a pair of edges e, f where e e T,/. T, and T-e U]’ is a spanning tree. The weight o]’ exchange e,
+f is w(f)- w(e). So the weight of tree T-e Uf is the weight of tree T plus the
+weight of exchange e, [.
+
+T-exchange
+
+Theorem: spanning tree with the next smallest weight is T - e + f, where (e, f) is a minimum weight T-exchange. This observation is the basis of the algorithm.
+
+Algorithm:
+EX:
+EX finds a minimum weight T-exchange e, f subject to certain constraints, IN, OUT.
+We call an edge g eligible if a minimum weight exchange (g, h) has not been found.
+1. all edges in T are eligible
+2. a list L contains all edges in G, sorted in increasing weight
+3. for each edge h 

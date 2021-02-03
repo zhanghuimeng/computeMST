@@ -1,0 +1,668 @@
+\hypertarget{classcmst_1_1_window}{}\section{cmst::Window Class Reference}
+\label{classcmst_1_1_window}\index{cmst::Window@{cmst::Window}}
+
+
+Collaboration diagram for cmst::Window:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structcmst_1_1_window_1_1_test}{Test}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcmst_1_1_graph2_d}{Graph2D} $\ast$ \hyperlink{classcmst_1_1_window_a83548b1c4406f37a812a0920fc4d6669}{curGraph} ()
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the graph in display currently. \end{DoxyCompactList}\item 
+void \hyperlink{classcmst_1_1_window_adfa83ea52f2c09def65b79cdf57092ad}{resetCurGraph} (std::vector$<$ \hyperlink{classcmst_1_1_point2_d}{Point2D} $>$ \&points)
+\item 
+void \hyperlink{classcmst_1_1_window_a08365866ac2ffa9793c25c92750341e2}{resetCurGraph} ()
+\item 
+void \hyperlink{classcmst_1_1_window_a83743944c1c6429f0eb9f3c72c9b7f22}{resetCurGraph} (int n)
+\item 
+void \hyperlink{classcmst_1_1_window_aa4ad17303edd88d526b66f9e6918fe7a}{resetCurGraph} (int low, int hi)
+\item 
+bool \hyperlink{classcmst_1_1_window_a3bb28914f7c58f3df9860ce333a8f25f}{load} ()
+\item 
+void \hyperlink{classcmst_1_1_window_ae54c419d28bd352f52a3beffa6fc1f32}{resetShowDelaunay} ()
+\begin{DoxyCompactList}\small\item\em Change whether the Delaunay diagram is to be drawn to the GLUT window. \end{DoxyCompactList}\item 
+void \hyperlink{classcmst_1_1_window_ade2fbcf37118ec96f9833112c0369d59}{resetShowPoint} ()
+\begin{DoxyCompactList}\small\item\em Change whether the points are to be drawn to the GLUT window. \end{DoxyCompactList}\item 
+void \hyperlink{classcmst_1_1_window_aad255fb6e9d56a48f85f9618aa99bc59}{resetShowMST} ()
+\begin{DoxyCompactList}\small\item\em Change whether the MST is to be drawn to the GLUT window. \end{DoxyCompactList}\item 
+void \hyperlink{classcmst_1_1_window_aceb66dae5cf798bf9df5f1f5deca520b}{resetShowST} ()
+\begin{DoxyCompactList}\small\item\em Change whether the STs are to be drawn to the GLUT window. \end{DoxyCompactList}\item 
+void \hyperlink{classcmst_1_1_window_a3f234daf3198e3611892515f1721de44}{resetWidth} (int \hyperlink{classcmst_1_1_window_a5fc4ccbd9afed56cd17d341269028da2}{width})
+\begin{DoxyCompactList}\small\item\em Record the width of current GLUT window. \end{DoxyCompactList}\item 
+void \hyperlink{classcmst_1_1_window_a8c4d7788d1932e73397c20b7a9639d69}{resetHeight} (int \hyperlink{classcmst_1_1_window_a6fc02b2afee52c0f71b6a3bd39c9210f}{height})
+\begin{DoxyCompactList}\small\item\em Record the height of current GLUT window. \end{DoxyCompactList}\item 
+int \hyperlink{classcmst_1_1_window_a5fc4ccbd9afed56cd17d341269028da2}{width} () const 
+\item 
+int \hyperlink{classcmst_1_1_window_a6fc02b2afee52c0f71b6a3bd39c9210f}{height} () const 
+\item 
+void \hyperlink{classcmst_1_1_window_a1d78ef796691e87ed3b4978f373c9890}{draw} ()
+\item 
+void \hyperlink{classcmst_1_1_window_a73eb23d7d7418cb288022e623e590461}{printCurInfo} ()
+\item 
+bool \hyperlink{classcmst_1_1_window_aa3f5edeebdd298190bdb4676b4838f75}{displayTest} () const 
+\item 
+void \hyperlink{classcmst_1_1_window_acda99115d9c67f83de4d8f5a94f2647c}{generateTest} (int n)
+\item 
+void \hyperlink{classcmst_1_1_window_a471e1648f99754f7c2cbfbbb1e8ab556}{printTestInfo} ()
+\item 
+int \hyperlink{classcmst_1_1_window_ae456c1bf45fc28133390fcc881fbd612}{testDisplayNum} () const 
+\item 
+void \hyperlink{classcmst_1_1_window_aa8dc3725888e12fc2c6e3626ab7b600a}{changeTestDisplay} (int direc)
+\item 
+bool \hyperlink{classcmst_1_1_window_a1d2514395cd8e864ddcd6aadf127bbbc}{printToFile} ()
+\begin{DoxyCompactList}\small\item\em Print the information of the current graph to file graph.txt. \end{DoxyCompactList}\item 
+void \hyperlink{classcmst_1_1_window_ae9d9bf19cad20b34a6ab850a8a218c13}{changeMSTDisplay} (int direc)
+\begin{DoxyCompactList}\small\item\em Change the MST that is being displayed. \end{DoxyCompactList}\item 
+void \hyperlink{classcmst_1_1_window_a5b39068b3053a7fe98f3d94de802fecb}{printSTInfo} ()
+\begin{DoxyCompactList}\small\item\em Print information of the current ST to console. \end{DoxyCompactList}\item 
+void \hyperlink{classcmst_1_1_window_ab2073132753d04d6cf7b882549f1ceea}{runValidate} ()
+\begin{DoxyCompactList}\small\item\em Run the validator for small graphs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classcmst_1_1_window}{Window} $\ast$ \hyperlink{classcmst_1_1_window_a281790e82296e7be50c19520f136e345}{instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structcmst_1_1_window_1_1_test}{cmst::Window::Test} \hyperlink{classcmst_1_1_window_aedae466fb2efd886cea6d775b20fabe3}{m\_test}
+\begin{DoxyCompactList}\small\item\em The test. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcmst_1_1_window_a2f0377f780b0dec7f9ca43145d98e8d1}{Window} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classcmst_1_1_window_a3a06a150faa316137c794be5acac4979}{Window} (const \hyperlink{classcmst_1_1_window}{Window} \&)
+\begin{DoxyCompactList}\small\item\em Private copy-\/constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcmst_1_1_graph2_d}{Graph2D} $\ast$ \hyperlink{classcmst_1_1_window_a86d6a605ac3dc593de030802009e73bc}{m\_curGraph}
+\begin{DoxyCompactList}\small\item\em The pointer to the graph that is being displayed. \end{DoxyCompactList}\item 
+bool \hyperlink{classcmst_1_1_window_a527a10c574abe1ad1e0279465b07a7f0}{m\_showDelaunay}
+\begin{DoxyCompactList}\small\item\em Whether the Delaunay iagram is to be drawn. \end{DoxyCompactList}\item 
+bool \hyperlink{classcmst_1_1_window_a55136499feb82b469393b5f18bb1fe88}{m\_showMST}
+\begin{DoxyCompactList}\small\item\em Whether the MST is to be drawn. \end{DoxyCompactList}\item 
+bool \hyperlink{classcmst_1_1_window_a8d8b71a285b5730cac0ce3fe63c91baf}{m\_showST}
+\begin{DoxyCompactList}\small\item\em Whether the MST is to be drawn. \end{DoxyCompactList}\item 
+bool \hyperlink{classcmst_1_1_window_a10240817a263c467d61dad604c820f52}{m\_showPoint}
+\begin{DoxyCompactList}\small\item\em Whether the points are to be drawn. \end{DoxyCompactList}\item 
+int \hyperlink{classcmst_1_1_window_a2955f1032cf2ab577a5f01776e46f671}{m\_width}
+\begin{DoxyCompactList}\small\item\em The width of current GLUT window. \end{DoxyCompactList}\item 
+int \hyperlink{classcmst_1_1_window_a9447754382ddb8894d50a40d19f027a3}{m\_height}
+\begin{DoxyCompactList}\small\item\em The height of current GLUT window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classcmst_1_1_window}{Window} $\ast$ \hyperlink{classcmst_1_1_window_a04ea9e382288b5d903542ee3f53b3617}{m\_instance} = NULL
+\begin{DoxyCompactList}\small\item\em The pointer to an instance of \hyperlink{classcmst_1_1_window}{cmst::Window}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Manipulates the window.
+
+Uses Singleton pattern. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{cmst::Window@{cmst::Window}!Window@{Window}}
+\index{Window@{Window}!cmst::Window@{cmst::Window}}
+\subsubsection[{\texorpdfstring{Window()}{Window()}}]{\setlength{\rightskip}{0pt plus 5cm}cmst::Window::Window (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classcmst_1_1_window_a2f0377f780b0dec7f9ca43145d98e8d1}{}\label{classcmst_1_1_window_a2f0377f780b0dec7f9ca43145d98e8d1}
+
+
+Constructor. 
+
+
+
+Here is the caller graph for this function:
+% FIG 1
+
+
+\index{cmst::Window@{cmst::Window}!Window@{Window}}
+\index{Window@{Window}!cmst::Window@{cmst::Window}}
+\subsubsection[{\texorpdfstring{Window(const Window \&)}{Window(const Window &)}}]{\setlength{\rightskip}{0pt plus 5cm}cmst::Window::Window (
+\begin{DoxyParamCaption}
+\item[{const {\bf Window} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classcmst_1_1_window_a3a06a150faa316137c794be5acac4979}{}\label{classcmst_1_1_window_a3a06a150faa316137c794be5acac4979}
+
+
+Private copy-\/constructor. 
+
+
+
+\subsection{Member Function Documentation}
+\index{cmst::Window@{cmst::Window}!changeMSTDisplay@{changeMSTDisplay}}
+\index{changeMSTDisplay@{changeMSTDisplay}!cmst::Window@{cmst::Window}}
+\subsubsection[{\texorpdfstring{changeMSTDisplay(int direc)}{changeMSTDisplay(int direc)}}]{\setlength{\rightskip}{0pt plus 5cm}void cmst::Window::changeMSTDisplay (
+\begin{DoxyParamCaption}
+\item[{int}]{direc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_window_ae9d9bf19cad20b34a6ab850a8a218c13}{}\label{classcmst_1_1_window_ae9d9bf19cad20b34a6ab850a8a218c13}
+
+
+Change the MST that is being displayed. 
+
+
+
+Here is the call graph for this function:
+% FIG 2
+
+
+\index{cmst::Window@{cmst::Window}!changeTestDisplay@{changeTestDisplay}}
+\index{changeTestDisplay@{changeTestDisplay}!cmst::Window@{cmst::Window}}
+\subsubsection[{\texorpdfstring{changeTestDisplay(int direc)}{changeTestDisplay(int direc)}}]{\setlength{\rightskip}{0pt plus 5cm}void cmst::Window::changeTestDisplay (
+\begin{DoxyParamCaption}
+\item[{int}]{direc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_window_aa8dc3725888e12fc2c6e3626ab7b600a}{}\label{classcmst_1_1_window_aa8dc3725888e12fc2c6e3626ab7b600a}
+If a test is being displayed, then changes the graph in the test that is being displayed.
+
+If no test has been generated, does nothing. 
+\begin{DoxyParams}{Parameters}
+{\em direc} & If negative, display the last graph (if there is one); if positive, display the next graph (if there is one). \\
+\hline
+\end{DoxyParams}
+\index{cmst::Window@{cmst::Window}!curGraph@{curGraph}}
+\index{curGraph@{curGraph}!cmst::Window@{cmst::Window}}
+\subsubsection[{\texorpdfstring{curGraph()}{curGraph()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Graph2D}$\ast$ cmst::Window::curGraph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_window_a83548b1c4406f37a812a0920fc4d6669}{}\label{classcmst_1_1_window_a83548b1c4406f37a812a0920fc4d6669}
+
+
+Returns a pointer to the graph in display currently. 
+
+
+
+Here is the call graph for this function:
+% FIG 3
+
+
+\index{cmst::Window@{cmst::Window}!displayTest@{displayTest}}
+\index{displayTest@{displayTest}!cmst::Window@{cmst::Window}}
+\subsubsection[{\texorpdfstring{displayTest() const }{displayTest() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool cmst::Window::displayTest (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_window_aa3f5edeebdd298190bdb4676b4838f75}{}\label{classcmst_1_1_window_aa3f5edeebdd298190bdb4676b4838f75}
+Returns if a test has been generated
+
+\begin{DoxyReturn}{Returns}
+If a test has been generated 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function:
+% FIG 4
+
+
+\index{cmst::Window@{cmst::Window}!draw@{draw}}
+\index{draw@{draw}!cmst::Window@{cmst::Window}}
+\subsubsection[{\texorpdfstring{draw()}{draw()}}]{\setlength{\rightskip}{0pt plus 5cm}void cmst::Window::draw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classcmst_1_1_window_a1d78ef796691e87ed3b4978f373c9890}{}\label{classcmst_1_1_window_a1d78ef796691e87ed3b4978f373c9890}
+Draws the current graph
+
+
+\begin{DoxyItemize}
+\item Points: definitely
+\item Delaunay Diagram: change whether to draw it by \hyperlink{classcmst_1_1_window_ae54c419d28bd352f52a3beffa6fc1f32}{Window::resetShowDelaunay()}
+\item MST: definitely
+\item Other spanning trees: draws one of them 
+\end{DoxyItemize}
+
+Here is the call graph for this function:
+% FIG 5
+
+
+
+
+Here is the caller graph for this function:
+% FIG 6
+
+
+\index{cmst::Window@{cmst::Window}!generateTest@{generateTest}}
+\index{generateTest@{generateTest}!cmst::Window@{cmst::Window}}
+\subsubsection[{\texorpdfstring{generateTest(int n)}{generateTest(int n)}}]{\setlength{\rightskip}{0pt plus 5cm}void cmst::Window::generateTest (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{classcmst_1_1_window_acda99115d9c67f83de4d8f5a94f2647c}{}\label{classcmst_1_1_window_acda99115d9c67f83de4d8f5a94f2647c}
+Generates a test of n graphs and display the first one.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The number of graphs in the test to be generated \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function:
+% FIG 7
+
+
+
+
+Here is the caller graph for this function:
+% FIG 8
+
+
+\index{cmst::Window@{cmst::Window}!height@{height}}
+\index{height@{height}!cmst::Window@{cmst::Window}}
+\subsubsection[{\texorpdfstring{height() const }{height() const }}]{\setlength{\rightskip}{0pt plus 5cm}int cmst::Window::height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_window_a6fc02b2afee52c0f71b6a3bd39c9210f}{}\label{classcmst_1_1_window_a6fc02b2afee52c0f71b6a3bd39c9210f}
+Return the height of current GLUT window.
+
+\begin{DoxyReturn}{Returns}
+The height of current GLUT window 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function:
+% FIG 9
+
+
+
+
+Here is the caller graph for this function:
+% FIG 10
+
+
+\index{cmst::Window@{cmst::Window}!instance@{instance}}
+\index{instance@{instance}!cmst::Window@{cmst::Window}}
+\subsubsection[{\texorpdfstring{instance()}{instance()}}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Window}$\ast$ cmst::Window::instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classcmst_1_1_window_a281790e82296e7be50c19520f136e345}{}\label{classcmst_1_1_window_a281790e82296e7be50c19520f136e345}
+Return the pointer to the instance of \hyperlink{classcmst_1_1_window}{cmst::Window} class.
+
+\begin{DoxyReturn}{Returns}
+the pointer to the instance 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function:
+% FIG 11
+
+
+\index{cmst::Window@{cmst::Window}!load@{load}}
+\index{load@{load}!cmst::Window@{cmst::Window}}
+\subsubsection[{\texorpdfstring{load()}{load()}}]{\setlength{\rightskip}{0pt plus 5cm}bool cmst::Window::load (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classcmst_1_1_window_a3bb28914f7c58f3df9860ce333a8f25f}{}\label{classcmst_1_1_window_a3bb28914f7c58f3df9860ce333a8f25f}
+
+
+Here is the call graph for this function:
+% FIG 12
+
+
+
+
+Here is the caller graph for this function:
+% FIG 13
+
+
+\index{cmst::Window@{cmst::Window}!printCurInfo@{printCurInfo}}
+\index{printCurInfo@{printCurInfo}!cmst::Window@{cmst::Window}}
+\subsubsection[{\texorpdfstring{printCurInfo()}{printCurInfo()}}]{\setlength{\rightskip}{0pt plus 5cm}void cmst::Window::printCurInfo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classcmst_1_1_window_a73eb23d7d7418cb288022e623e590461}{}\label{classcmst_1_1_window_a73eb23d7d7418cb288022e623e590461}
+Prints information about the current displayed graph to console
+
+Information including numbers and computational time 
+
+Here is the call graph for this function:
+% FIG 14
+
+
+
+
+Here is the caller graph for this function:
+% FIG 15
+
+
+\index{cmst::Window@{cmst::Window}!printSTInfo@{printSTInfo}}
+\index{printSTInfo@{printSTInfo}!cmst::Window@{cmst::Window}}
+\subsubsection[{\texorpdfstring{printSTInfo()}{printSTInfo()}}]{\setlength{\rightskip}{0pt plus 5cm}void cmst::Window::printSTInfo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_window_a5b39068b3053a7fe98f3d94de802fecb}{}\label{classcmst_1_1_window_a5b39068b3053a7fe98f3d94de802fecb}
+
+
+Print information of the current ST to console. 
+
+
+
+Here is the call graph for this function:
+% FIG 16
+
+
+\index{cmst::Window@{cmst::Window}!printTestInfo@{printTestInfo}}
+\index{printTestInfo@{printTestInfo}!cmst::Window@{cmst::Window}}
+\subsubsection[{\texorpdfstring{printTestInfo()}{printTestInfo()}}]{\setlength{\rightskip}{0pt plus 5cm}void cmst::Window::printTestInfo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classcmst_1_1_window_a471e1648f99754f7c2cbfbbb1e8ab556}{}\label{classcmst_1_1_window_a471e1648f99754f7c2cbfbbb1e8ab556}
+Prints information about the test that has been generated to console.
+
+If no test has been generated, then nothing is printed. 
+
+Here is the call graph for this function:
+% FIG 17
+
+
+
+
+Here is the caller graph for this function:
+% FIG 18
+
+
+\index{cmst::Window@{cmst::Window}!printToFile@{printToFile}}
+\index{printToFile@{printToFile}!cmst::Window@{cmst::Window}}
+\subsubsection[{\texorpdfstring{printToFile()}{printToFile()}}]{\setlength{\rightskip}{0pt plus 5cm}bool cmst::Window::printToFile (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_window_a1d2514395cd8e864ddcd6aadf127bbbc}{}\label{classcmst_1_1_window_a1d2514395cd8e864ddcd6aadf127bbbc}
+
+
+Print the information of the current graph to file graph.txt. 
+
+
+
+Here is the call graph for this function:
+% FIG 19
+
+
+\index{cmst::Window@{cmst::Window}!resetCurGraph@{resetCurGraph}}
+\index{resetCurGraph@{resetCurGraph}!cmst::Window@{cmst::Window}}
+\subsubsection[{\texorpdfstring{resetCurGraph(std::vector$<$ Point2D $>$ \&points)}{resetCurGraph(std::vector< Point2D > &points)}}]{\setlength{\rightskip}{0pt plus 5cm}void cmst::Window::resetCurGraph (
+\begin{DoxyParamCaption}
+\item[{std::vector$<$ {\bf Point2D} $>$ \&}]{points}
+\end{DoxyParamCaption}
+)}\hypertarget{classcmst_1_1_window_adfa83ea52f2c09def65b79cdf57092ad}{}\label{classcmst_1_1_window_adfa83ea52f2c09def65b79cdf57092ad}
+Reset the current graph with a vector of points. 
+\begin{DoxyParams}{Parameters}
+{\em points} & A vector of points. \\
+\hline
+\end{DoxyParams}
+\index{cmst::Window@{cmst::Window}!resetCurGraph@{resetCurGraph}}
+\index{resetCurGraph@{resetCurGraph}!cmst::Window@{cmst::Window}}
+\subsubsection[{\texorpdfstring{resetCurGraph()}{resetCurGraph()}}]{\setlength{\rightskip}{0pt plus 5cm}void cmst::Window::resetCurGraph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classcmst_1_1_window_a08365866ac2ffa9793c25c92750341e2}{}\label{classcmst_1_1_window_a08365866ac2ffa9793c25c92750341e2}
+Reset the current graph with \hyperlink{namespacecmst_abd1822f67dc5d2be959508e628be0633}{cmst::TestcaseGenerator}
+
+The size of the graph is defaulted. 
+
+Here is the call graph for this function:
+% FIG 20
+
+
+
+
+Here is the caller graph for this function:
+% FIG 21
+
+
+\index{cmst::Window@{cmst::Window}!resetCurGraph@{resetCurGraph}}
+\index{resetCurGraph@{resetCurGraph}!cmst::Window@{cmst::Window}}
+\subsubsection[{\texorpdfstring{resetCurGraph(int n)}{resetCurGraph(int n)}}]{\setlength{\rightskip}{0pt plus 5cm}void cmst::Window::resetCurGraph (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{classcmst_1_1_window_a83743944c1c6429f0eb9f3c72c9b7f22}{}\label{classcmst_1_1_window_a83743944c1c6429f0eb9f3c72c9b7f22}
+Reset the current graph with n random generated points.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The size of the graph to be generated. \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function:
+% FIG 22
+
+
+\index{cmst::Window@{cmst::Window}!resetCurGraph@{resetCurGraph}}
+\index{resetCurGraph@{resetCurGraph}!cmst::Window@{cmst::Window}}
+\subsubsection[{\texorpdfstring{resetCurGraph(int low, int hi)}{resetCurGraph(int low, int hi)}}]{\setlength{\rightskip}{0pt plus 5cm}void cmst::Window::resetCurGraph (
+\begin{DoxyParamCaption}
+\item[{int}]{low, }
+\item[{int}]{hi}
+\end{DoxyParamCaption}
+)}\hypertarget{classcmst_1_1_window_aa4ad17303edd88d526b66f9e6918fe7a}{}\label{classcmst_1_1_window_aa4ad17303edd88d526b66f9e6918fe7a}
+Reset the current graph with random generated points.
+
+The size of the graph to be generated is randomly selected between low and hi. 
+\begin{DoxyParams}{Parameters}
+{\em low} & The least number of points to be generated. \\
+\hline
+{\em hi} & The most number of points to be generated. \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function:
+% FIG 23
+
+
+\index{cmst::Window@{cmst::Window}!resetHeight@{resetHeight}}
+\index{resetHeight@{resetHeight}!cmst::Window@{cmst::Window}}
+\subsubsection[{\texorpdfstring{resetHeight(int height)}{resetHeight(int height)}}]{\setlength{\rightskip}{0pt plus 5cm}void cmst::Window::resetHeight (
+\begin{DoxyParamCaption}
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_window_a8c4d7788d1932e73397c20b7a9639d69}{}\label{classcmst_1_1_window_a8c4d7788d1932e73397c20b7a9639d69}
+
+
+Record the height of current GLUT window. 
+
+
+
+Here is the call graph for this function:
+% FIG 24
+
+
+\index{cmst::Window@{cmst::Window}!resetShowDelaunay@{resetShowDelaunay}}
+\index{resetShowDelaunay@{resetShowDelaunay}!cmst::Window@{cmst::Window}}
+\subsubsection[{\texorpdfstring{resetShowDelaunay()}{resetShowDelaunay()}}]{\setlength{\rightskip}{0pt plus 5cm}void cmst::Window::resetShowDelaunay (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_window_ae54c419d28bd352f52a3beffa6fc1f32}{}\label{classcmst_1_1_window_ae54c419d28bd352f52a3beffa6fc1f32}
+
+
+Change whether the Delaunay diagram is to be drawn to the GLUT window. 
+
+\index{cmst::Window@{cmst::Window}!resetShowMST@{resetShowMST}}
+\index{resetShowMST@{resetShowMST}!cmst::Window@{cmst::Window}}
+\subsubsection[{\texorpdfstring{resetShowMST()}{resetShowMST()}}]{\setlength{\rightskip}{0pt plus 5cm}void cmst::Window::resetShowMST (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_window_aad255fb6e9d56a48f85f9618aa99bc59}{}\label{classcmst_1_1_window_aad255fb6e9d56a48f85f9618aa99bc59}
+
+
+Change whether the MST is to be drawn to the GLUT window. 
+
+\index{cmst::Window@{cmst::Window}!resetShowPoint@{resetShowPoint}}
+\index{resetShowPoint@{resetShowPoint}!cmst::Window@{cmst::Window}}
+\subsubsection[{\texorpdfstring{resetShowPoint()}{resetShowPoint()}}]{\setlength{\rightskip}{0pt plus 5cm}void cmst::Window::resetShowPoint (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_window_ade2fbcf37118ec96f9833112c0369d59}{}\label{classcmst_1_1_window_ade2fbcf37118ec96f9833112c0369d59}
+
+
+Change whether the points are to be drawn to the GLUT window. 
+
+\index{cmst::Window@{cmst::Window}!resetShowST@{resetShowST}}
+\index{resetShowST@{resetShowST}!cmst::Window@{cmst::Window}}
+\subsubsection[{\texorpdfstring{resetShowST()}{resetShowST()}}]{\setlength{\rightskip}{0pt plus 5cm}void cmst::Window::resetShowST (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_window_aceb66dae5cf798bf9df5f1f5deca520b}{}\label{classcmst_1_1_window_aceb66dae5cf798bf9df5f1f5deca520b}
+
+
+Change whether the STs are to be drawn to the GLUT window. 
+
+\index{cmst::Window@{cmst::Window}!resetWidth@{resetWidth}}
+\index{resetWidth@{resetWidth}!cmst::Window@{cmst::Window}}
+\subsubsection[{\texorpdfstring{resetWidth(int width)}{resetWidth(int width)}}]{\setlength{\rightskip}{0pt plus 5cm}void cmst::Window::resetWidth (
+\begin{DoxyParamCaption}
+\item[{int}]{width}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_window_a3f234daf3198e3611892515f1721de44}{}\label{classcmst_1_1_window_a3f234daf3198e3611892515f1721de44}
+
+
+Record the width of current GLUT window. 
+
+
+
+Here is the call graph for this function:
+% FIG 25
+
+
+\index{cmst::Window@{cmst::Window}!runValidate@{runValidate}}
+\index{runValidate@{runValidate}!cmst::Window@{cmst::Window}}
+\subsubsection[{\texorpdfstring{runValidate()}{runValidate()}}]{\setlength{\rightskip}{0pt plus 5cm}void cmst::Window::runValidate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_window_ab2073132753d04d6cf7b882549f1ceea}{}\label{classcmst_1_1_window_ab2073132753d04d6cf7b882549f1ceea}
+
+
+Run the validator for small graphs. 
+
+
+
+Here is the call graph for this function:
+% FIG 26
+
+
+\index{cmst::Window@{cmst::Window}!testDisplayNum@{testDisplayNum}}
+\index{testDisplayNum@{testDisplayNum}!cmst::Window@{cmst::Window}}
+\subsubsection[{\texorpdfstring{testDisplayNum() const }{testDisplayNum() const }}]{\setlength{\rightskip}{0pt plus 5cm}int cmst::Window::testDisplayNum (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_window_ae456c1bf45fc28133390fcc881fbd612}{}\label{classcmst_1_1_window_ae456c1bf45fc28133390fcc881fbd612}
+Returns the number of graphs in the test that has been generated. \begin{DoxyReturn}{Returns}
+the number of graphs in the test that has been generated. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & If no test has been generated. \\
+\hline
+\end{DoxyRetVals}
+\index{cmst::Window@{cmst::Window}!width@{width}}
+\index{width@{width}!cmst::Window@{cmst::Window}}
+\subsubsection[{\texorpdfstring{width() const }{width() const }}]{\setlength{\rightskip}{0pt plus 5cm}int cmst::Window::width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_window_a5fc4ccbd9afed56cd17d341269028da2}{}\label{classcmst_1_1_window_a5fc4ccbd9afed56cd17d341269028da2}
+Return the width of current GLUT window.
+
+\begin{DoxyReturn}{Returns}
+The width of current GLUT window 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function:
+% FIG 27
+
+
+
+
+\subsection{Member Data Documentation}
+\index{cmst::Window@{cmst::Window}!m\_curGraph@{m\_curGraph}}
+\index{m\_curGraph@{m\_curGraph}!cmst::Window@{cmst::Window}}
+\subsubsection[{\texorpdfstring{m\_curGraph}{m_curGraph}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Graph2D}$\ast$ cmst::Window::m\_curGraph\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classcmst_1_1_window_a86d6a605ac3dc593de030802009e73bc}{}\label{classcmst_1_1_window_a86d6a605ac3dc593de030802009e73bc}
+
+
+The pointer to the graph that is being displayed. 
+
+\index{cmst::Window@{cmst::Window}!m\_height@{m\_height}}
+\index{m\_height@{m\_height}!cmst::Window@{cmst::Window}}
+\subsubsection[{\texorpdfstring{m\_height}{m_height}}]{\setlength{\rightskip}{0pt plus 5cm}int cmst::Window::m\_height\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classcmst_1_1_window_a9447754382ddb8894d50a40d19f027a3}{}\label{classcmst_1_1_window_a9447754382ddb8894d50a40d19f027a3}
+
+
+The height of current GLUT window. 
+
+\index{cmst::Window@{cmst::Window}!m\_instance@{m\_instance}}
+\index{m\_instance@{m\_instance}!cmst::Window@{cmst::Window}}
+\subsubsection[{\texorpdfstring{m\_instance}{m_instance}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cmst::Window} $\ast$ cmst::Window::m\_instance = NULL\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\hypertarget{classcmst_1_1_window_a04ea9e382288b5d903542ee3f53b3617}{}\label{classcmst_1_1_window_a04ea9e382288b5d903542ee3f53b3617}
+
+
+The pointer to an instance of \hyperlink{classcmst_1_1_window}{cmst::Window}. 
+
+\index{cmst::Window@{cmst::Window}!m\_showDelaunay@{m\_showDelaunay}}
+\index{m\_showDelaunay@{m\_showDelaunay}!cmst::Window@{cmst::Window}}
+\subsubsection[{\texorpdfstring{m\_showDelaunay}{m_showDelaunay}}]{\setlength{\rightskip}{0pt plus 5cm}bool cmst::Window::m\_showDelaunay\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classcmst_1_1_window_a527a10c574abe1ad1e0279465b07a7f0}{}\label{classcmst_1_1_window_a527a10c574abe1ad1e0279465b07a7f0}
+
+
+Whether the Delaunay iagram is to be drawn. 
+
+\index{cmst::Window@{cmst::Window}!m\_showMST@{m\_showMST}}
+\index{m\_showMST@{m\_showMST}!cmst::Window@{cmst::Window}}
+\subsubsection[{\texorpdfstring{m\_showMST}{m_showMST}}]{\setlength{\rightskip}{0pt plus 5cm}bool cmst::Window::m\_showMST\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classcmst_1_1_window_a55136499feb82b469393b5f18bb1fe88}{}\label{classcmst_1_1_window_a55136499feb82b469393b5f18bb1fe88}
+
+
+Whether the MST is to be drawn. 
+
+\index{cmst::Window@{cmst::Window}!m\_showPoint@{m\_showPoint}}
+\index{m\_showPoint@{m\_showPoint}!cmst::Window@{cmst::Window}}
+\subsubsection[{\texorpdfstring{m\_showPoint}{m_showPoint}}]{\setlength{\rightskip}{0pt plus 5cm}bool cmst::Window::m\_showPoint\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classcmst_1_1_window_a10240817a263c467d61dad604c820f52}{}\label{classcmst_1_1_window_a10240817a263c467d61dad604c820f52}
+
+
+Whether the points are to be drawn. 
+
+\index{cmst::Window@{cmst::Window}!m\_showST@{m\_showST}}
+\index{m\_showST@{m\_showST}!cmst::Window@{cmst::Window}}
+\subsubsection[{\texorpdfstring{m\_showST}{m_showST}}]{\setlength{\rightskip}{0pt plus 5cm}bool cmst::Window::m\_showST\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classcmst_1_1_window_a8d8b71a285b5730cac0ce3fe63c91baf}{}\label{classcmst_1_1_window_a8d8b71a285b5730cac0ce3fe63c91baf}
+
+
+Whether the MST is to be drawn. 
+
+\index{cmst::Window@{cmst::Window}!m\_test@{m\_test}}
+\index{m\_test@{m\_test}!cmst::Window@{cmst::Window}}
+\subsubsection[{\texorpdfstring{m\_test}{m_test}}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf cmst::Window::Test}  cmst::Window::m\_test\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classcmst_1_1_window_aedae466fb2efd886cea6d775b20fabe3}{}\label{classcmst_1_1_window_aedae466fb2efd886cea6d775b20fabe3}
+
+
+The test. 
+
+\index{cmst::Window@{cmst::Window}!m\_width@{m\_width}}
+\index{m\_width@{m\_width}!cmst::Window@{cmst::Window}}
+\subsubsection[{\texorpdfstring{m\_width}{m_width}}]{\setlength{\rightskip}{0pt plus 5cm}int cmst::Window::m\_width\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classcmst_1_1_window_a2955f1032cf2ab577a5f01776e46f671}{}\label{classcmst_1_1_window_a2955f1032cf2ab577a5f01776e46f671}
+
+
+The width of current GLUT window. 
+

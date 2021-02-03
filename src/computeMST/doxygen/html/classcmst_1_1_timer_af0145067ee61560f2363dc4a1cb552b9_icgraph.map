@@ -1,0 +1,5 @@
+<map id="cmst::Timer::time" name="cmst::Timer::time">
+<area shape="rect" id="node2" href="$classcmst_1_1_graph2_d.html#a36cf583f9e2e59da2bed94c8569914d2" title="cmst::Graph2D::Graph2D" alt="" coords="188,5,357,32"/>
+<area shape="rect" id="node3" href="$classcmst_1_1_graph2_d.html#af0db14845e80799be1d4fb15ca230110" title="cmst::Graph2D::naiveKruskal" alt="" coords="177,56,368,83"/>
+<area shape="rect" id="node4" href="$classcmst_1_1_window.html#ab2073132753d04d6cf7b882549f1ceea" title="Run the validator for small graphs. " alt="" coords="416,56,595,83"/>
+</map>

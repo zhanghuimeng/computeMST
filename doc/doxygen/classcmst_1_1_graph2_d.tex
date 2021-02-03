@@ -1,0 +1,549 @@
+\hypertarget{classcmst_1_1_graph2_d}{}\section{cmst::Graph2D Class Reference}
+\label{classcmst_1_1_graph2_d}\index{cmst::Graph2D@{cmst::Graph2D}}
+
+
+Collaboration diagram for cmst::Graph2D:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structcmst_1_1_graph2_d_1_1_s_t}{ST}
+\begin{DoxyCompactList}\small\item\em Store a spanning tree of the graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcmst_1_1_graph2_d_a36cf583f9e2e59da2bed94c8569914d2}{Graph2D} (std::vector$<$ \hyperlink{classcmst_1_1_point2_d}{Point2D} $>$ \&points)
+\item 
+double \hyperlink{classcmst_1_1_graph2_d_a034d2d37b2d106c0e25d7ad7bc67907e}{Kruskal} ()
+\item 
+double \hyperlink{classcmst_1_1_graph2_d_af0db14845e80799be1d4fb15ca230110}{naiveKruskal} ()
+\item 
+void \hyperlink{classcmst_1_1_graph2_d_affec250ee22a067a28127b46ce976b90}{drawPoint} ()
+\begin{DoxyCompactList}\small\item\em Use GLUT to draw the points in the graph. \end{DoxyCompactList}\item 
+void \hyperlink{classcmst_1_1_graph2_d_a2c4ed2ccd1fffc94c636929e531c4e3e}{drawDelaunay} ()
+\begin{DoxyCompactList}\small\item\em Use GLUT to draw the Delaunay Diagram of the graph. \end{DoxyCompactList}\item 
+void \hyperlink{classcmst_1_1_graph2_d_a96e388b819b351c8564eed9aecf58f7d}{drawMST} ()
+\begin{DoxyCompactList}\small\item\em Use GLUT to draw the MST computed by \hyperlink{classcmst_1_1_graph2_d_a034d2d37b2d106c0e25d7ad7bc67907e}{Kruskal()}. \end{DoxyCompactList}\item 
+void \hyperlink{classcmst_1_1_graph2_d_aebccee0b43539e658029a6f531ee1b0e}{drawST} ()
+\begin{DoxyCompactList}\small\item\em Use GLUT to draw the \hyperlink{structcmst_1_1_graph2_d_1_1_s_t}{ST} computed by \hyperlink{classcmst_1_1_graph2_d_af0db14845e80799be1d4fb15ca230110}{naiveKruskal()}. \end{DoxyCompactList}\item 
+bool \hyperlink{classcmst_1_1_graph2_d_a0e0bafdd08a942ef01c66768b5021f09}{print} (std::string file=\char`\"{}graph.txt\char`\"{})
+\begin{DoxyCompactList}\small\item\em Print the graph information to file. \end{DoxyCompactList}\item 
+void \hyperlink{classcmst_1_1_graph2_d_abb6cf2245d6ac93f5553e28f8723fce5}{changeSTDisplay} (int direc)
+\item 
+void \hyperlink{classcmst_1_1_graph2_d_a547a65e56068434928777eb7b4e59510}{printSTInfo} ()
+\begin{DoxyCompactList}\small\item\em Print the information of the current spanning tree displayed. \end{DoxyCompactList}\item 
+double \hyperlink{classcmst_1_1_graph2_d_aea22c23fdbb3b9e91671562cb19730ed}{mstLength} ()
+\item 
+int \hyperlink{classcmst_1_1_graph2_d_a93a1d4d5d2dd08796e37bcba6de79341}{delaunayTime} () const 
+\begin{DoxyCompactList}\small\item\em Return the time used for computing Delaunay diagram. \end{DoxyCompactList}\item 
+int \hyperlink{classcmst_1_1_graph2_d_a3b596946f310f7024036d2c6a18985a3}{mstTime} ()
+\item 
+int \hyperlink{classcmst_1_1_graph2_d_ad4756aa3f617493bd8b3f6ecfe099449}{graphConstructTime} () const 
+\item 
+int \hyperlink{classcmst_1_1_graph2_d_a0b18b38d5813b2fdbe8f5a8d6f92575d}{pointNum} () const 
+\begin{DoxyCompactList}\small\item\em Return the number of points in this graph. \end{DoxyCompactList}\item 
+int \hyperlink{classcmst_1_1_graph2_d_ae2474e4dd9964cd18fc9926a296c82fd}{edgeNum} () const 
+\begin{DoxyCompactList}\small\item\em Return the number of edges in the Delaunay diagram. \end{DoxyCompactList}\item 
+bool \hyperlink{classcmst_1_1_graph2_d_ab7fbcf59b9ef4e9cc10015fd610cb4fc}{validateDone} () const 
+\begin{DoxyCompactList}\small\item\em Return if the MST has been validated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classcmst_1_1_graph2_d_a0b860daa24f288eea5f490e12fcb67e2}{findFather} (int x)
+\begin{DoxyCompactList}\small\item\em Find the father of x in the Union-\/find Sets structure. \end{DoxyCompactList}\item 
+void \hyperlink{classcmst_1_1_graph2_d_a5de76dfe02b4a13e0d3fe9a5e7ea7285}{initFather} ()
+\begin{DoxyCompactList}\small\item\em Initializes the father array for Union-\/find Sets structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std::vector$<$ int $>$ \hyperlink{classcmst_1_1_graph2_d_ad5d251f2f6f8b827af4404985fcec53c}{father}
+\begin{DoxyCompactList}\small\item\em Father array for Union-\/find Sets structure. \end{DoxyCompactList}\item 
+std::vector$<$ \hyperlink{classcmst_1_1_point2_d}{Point2D} $>$ \hyperlink{classcmst_1_1_graph2_d_a32456f3c630e34a56ce3109183142c10}{m\_points}
+\begin{DoxyCompactList}\small\item\em Points in the graph. \end{DoxyCompactList}\item 
+std::vector$<$ \hyperlink{classcmst_1_1_index_edge2_d}{IndexEdge2D} $>$ \hyperlink{classcmst_1_1_graph2_d_a6fe64b2078ec3c700a8a2e2bd77e2dae}{m\_delaunayEdge}
+\begin{DoxyCompactList}\small\item\em Delaunay edges of the graph. \end{DoxyCompactList}\item 
+std::vector$<$ \hyperlink{classcmst_1_1_index_edge2_d}{IndexEdge2D} $>$ \hyperlink{classcmst_1_1_graph2_d_a1cc96b5251162964ac21f46955ac8271}{m\_MSTEdge}
+\begin{DoxyCompactList}\small\item\em MST edges of the graph. \end{DoxyCompactList}\item 
+std::vector$<$ \hyperlink{classcmst_1_1_index_edge2_d}{IndexEdge2D} $>$ \hyperlink{classcmst_1_1_graph2_d_a31a6b042c1c1941ee59672b842c7d3c9}{m\_edges}
+\begin{DoxyCompactList}\small\item\em All possible edges in the graph. \end{DoxyCompactList}\item 
+std::vector$<$ std::vector$<$ int $>$ $>$ \hyperlink{classcmst_1_1_graph2_d_a5df9c78edb4f5c68da11b01e44061dc5}{m\_graph}
+\begin{DoxyCompactList}\small\item\em Adjacency list of the Delaunay diagram of the graph. \end{DoxyCompactList}\item 
+Delaunay \hyperlink{classcmst_1_1_graph2_d_af19557df59901e6078c2038652c95623}{m\_delaunay}
+\begin{DoxyCompactList}\small\item\em CGAL data structure for storing and computing a Delaunay diagram. \end{DoxyCompactList}\item 
+std::vector$<$ \hyperlink{structcmst_1_1_graph2_d_1_1_s_t}{ST} $>$ \hyperlink{classcmst_1_1_graph2_d_a829dc681f90679478b0ba9676af0bc03}{m\_ST}
+\begin{DoxyCompactList}\small\item\em Spanning trees of the graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classcmst_1_1_graph2_d_ab7c087fe87b5750195100ff25f10f628}{m\_mstDone}
+\begin{DoxyCompactList}\small\item\em If \hyperlink{classcmst_1_1_graph2_d_a034d2d37b2d106c0e25d7ad7bc67907e}{Kruskal()} has been called. \end{DoxyCompactList}\item 
+bool \hyperlink{classcmst_1_1_graph2_d_ae609751f322449c3ac98303a8d6fa747}{m\_validateDone}
+\begin{DoxyCompactList}\small\item\em If \hyperlink{classcmst_1_1_graph2_d_af0db14845e80799be1d4fb15ca230110}{naiveKruskal()} has been called. \end{DoxyCompactList}\item 
+double \hyperlink{classcmst_1_1_graph2_d_a722498b25b96d26e68e378ba970d5e65}{m\_mstLength}
+\begin{DoxyCompactList}\small\item\em Length of the MST. \end{DoxyCompactList}\item 
+int \hyperlink{classcmst_1_1_graph2_d_a869a2fef63a6dbc8733056afd9ad0b71}{m\_delaunayTime}
+\begin{DoxyCompactList}\small\item\em Time used for computing the Delaunay diagram. \end{DoxyCompactList}\item 
+int \hyperlink{classcmst_1_1_graph2_d_a447f3d36666c57d2f15bddc1e3126f1e}{m\_mstTime}
+\begin{DoxyCompactList}\small\item\em Time used for computing the MST. \end{DoxyCompactList}\item 
+int \hyperlink{classcmst_1_1_graph2_d_ac594da90a2c9bd7332644532969ef11f}{m\_graphConstructTime}
+\begin{DoxyCompactList}\small\item\em Time used for reconstructing the graph. \end{DoxyCompactList}\item 
+int \hyperlink{classcmst_1_1_graph2_d_aa5479777b7d8650b85c15b1f8a54bd95}{m\_displaySTNum}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{cmst::Graph2D@{cmst::Graph2D}!Graph2D@{Graph2D}}
+\index{Graph2D@{Graph2D}!cmst::Graph2D@{cmst::Graph2D}}
+\subsubsection[{\texorpdfstring{Graph2D(std::vector$<$ Point2D $>$ \&points)}{Graph2D(std::vector< Point2D > &points)}}]{\setlength{\rightskip}{0pt plus 5cm}cmst::Graph2D::Graph2D (
+\begin{DoxyParamCaption}
+\item[{std::vector$<$ {\bf Point2D} $>$ \&}]{points}
+\end{DoxyParamCaption}
+)}\hypertarget{classcmst_1_1_graph2_d_a36cf583f9e2e59da2bed94c8569914d2}{}\label{classcmst_1_1_graph2_d_a36cf583f9e2e59da2bed94c8569914d2}
+Constructor which does everything.
+
+
+\begin{DoxyItemize}
+\item Compute Delaunay graph
+\item Reconstruct the graph 
+\end{DoxyItemize}
+
+Here is the call graph for this function:
+% FIG 1
+
+
+
+
+\subsection{Member Function Documentation}
+\index{cmst::Graph2D@{cmst::Graph2D}!changeSTDisplay@{changeSTDisplay}}
+\index{changeSTDisplay@{changeSTDisplay}!cmst::Graph2D@{cmst::Graph2D}}
+\subsubsection[{\texorpdfstring{changeSTDisplay(int direc)}{changeSTDisplay(int direc)}}]{\setlength{\rightskip}{0pt plus 5cm}void cmst::Graph2D::changeSTDisplay (
+\begin{DoxyParamCaption}
+\item[{int}]{direc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_graph2_d_abb6cf2245d6ac93f5553e28f8723fce5}{}\label{classcmst_1_1_graph2_d_abb6cf2245d6ac93f5553e28f8723fce5}
+Change the displaying spanning tree
+
+To-\/do: calculate the top k spanning trees 
+
+Here is the caller graph for this function:
+% FIG 2
+
+
+\index{cmst::Graph2D@{cmst::Graph2D}!delaunayTime@{delaunayTime}}
+\index{delaunayTime@{delaunayTime}!cmst::Graph2D@{cmst::Graph2D}}
+\subsubsection[{\texorpdfstring{delaunayTime() const }{delaunayTime() const }}]{\setlength{\rightskip}{0pt plus 5cm}int cmst::Graph2D::delaunayTime (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_graph2_d_a93a1d4d5d2dd08796e37bcba6de79341}{}\label{classcmst_1_1_graph2_d_a93a1d4d5d2dd08796e37bcba6de79341}
+
+
+Return the time used for computing Delaunay diagram. 
+
+
+
+Here is the caller graph for this function:
+% FIG 3
+
+
+\index{cmst::Graph2D@{cmst::Graph2D}!drawDelaunay@{drawDelaunay}}
+\index{drawDelaunay@{drawDelaunay}!cmst::Graph2D@{cmst::Graph2D}}
+\subsubsection[{\texorpdfstring{drawDelaunay()}{drawDelaunay()}}]{\setlength{\rightskip}{0pt plus 5cm}void cmst::Graph2D::drawDelaunay (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classcmst_1_1_graph2_d_a2c4ed2ccd1fffc94c636929e531c4e3e}{}\label{classcmst_1_1_graph2_d_a2c4ed2ccd1fffc94c636929e531c4e3e}
+
+
+Use GLUT to draw the Delaunay Diagram of the graph. 
+
+
+
+Here is the caller graph for this function:
+% FIG 4
+
+
+\index{cmst::Graph2D@{cmst::Graph2D}!drawMST@{drawMST}}
+\index{drawMST@{drawMST}!cmst::Graph2D@{cmst::Graph2D}}
+\subsubsection[{\texorpdfstring{drawMST()}{drawMST()}}]{\setlength{\rightskip}{0pt plus 5cm}void cmst::Graph2D::drawMST (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classcmst_1_1_graph2_d_a96e388b819b351c8564eed9aecf58f7d}{}\label{classcmst_1_1_graph2_d_a96e388b819b351c8564eed9aecf58f7d}
+
+
+Use GLUT to draw the MST computed by \hyperlink{classcmst_1_1_graph2_d_a034d2d37b2d106c0e25d7ad7bc67907e}{Kruskal()}. 
+
+
+
+Here is the caller graph for this function:
+% FIG 5
+
+
+\index{cmst::Graph2D@{cmst::Graph2D}!drawPoint@{drawPoint}}
+\index{drawPoint@{drawPoint}!cmst::Graph2D@{cmst::Graph2D}}
+\subsubsection[{\texorpdfstring{drawPoint()}{drawPoint()}}]{\setlength{\rightskip}{0pt plus 5cm}void cmst::Graph2D::drawPoint (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classcmst_1_1_graph2_d_affec250ee22a067a28127b46ce976b90}{}\label{classcmst_1_1_graph2_d_affec250ee22a067a28127b46ce976b90}
+
+
+Use GLUT to draw the points in the graph. 
+
+
+
+Here is the caller graph for this function:
+% FIG 6
+
+
+\index{cmst::Graph2D@{cmst::Graph2D}!drawST@{drawST}}
+\index{drawST@{drawST}!cmst::Graph2D@{cmst::Graph2D}}
+\subsubsection[{\texorpdfstring{drawST()}{drawST()}}]{\setlength{\rightskip}{0pt plus 5cm}void cmst::Graph2D::drawST (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classcmst_1_1_graph2_d_aebccee0b43539e658029a6f531ee1b0e}{}\label{classcmst_1_1_graph2_d_aebccee0b43539e658029a6f531ee1b0e}
+
+
+Use GLUT to draw the \hyperlink{structcmst_1_1_graph2_d_1_1_s_t}{ST} computed by \hyperlink{classcmst_1_1_graph2_d_af0db14845e80799be1d4fb15ca230110}{naiveKruskal()}. 
+
+
+
+Here is the call graph for this function:
+% FIG 7
+
+
+
+
+Here is the caller graph for this function:
+% FIG 8
+
+
+\index{cmst::Graph2D@{cmst::Graph2D}!edgeNum@{edgeNum}}
+\index{edgeNum@{edgeNum}!cmst::Graph2D@{cmst::Graph2D}}
+\subsubsection[{\texorpdfstring{edgeNum() const }{edgeNum() const }}]{\setlength{\rightskip}{0pt plus 5cm}int cmst::Graph2D::edgeNum (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_graph2_d_ae2474e4dd9964cd18fc9926a296c82fd}{}\label{classcmst_1_1_graph2_d_ae2474e4dd9964cd18fc9926a296c82fd}
+
+
+Return the number of edges in the Delaunay diagram. 
+
+
+
+Here is the caller graph for this function:
+% FIG 9
+
+
+\index{cmst::Graph2D@{cmst::Graph2D}!findFather@{findFather}}
+\index{findFather@{findFather}!cmst::Graph2D@{cmst::Graph2D}}
+\subsubsection[{\texorpdfstring{findFather(int x)}{findFather(int x)}}]{\setlength{\rightskip}{0pt plus 5cm}int cmst::Graph2D::findFather (
+\begin{DoxyParamCaption}
+\item[{int}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classcmst_1_1_graph2_d_a0b860daa24f288eea5f490e12fcb67e2}{}\label{classcmst_1_1_graph2_d_a0b860daa24f288eea5f490e12fcb67e2}
+
+
+Find the father of x in the Union-\/find Sets structure. 
+
+
+
+Here is the caller graph for this function:
+% FIG 10
+
+
+\index{cmst::Graph2D@{cmst::Graph2D}!graphConstructTime@{graphConstructTime}}
+\index{graphConstructTime@{graphConstructTime}!cmst::Graph2D@{cmst::Graph2D}}
+\subsubsection[{\texorpdfstring{graphConstructTime() const }{graphConstructTime() const }}]{\setlength{\rightskip}{0pt plus 5cm}int cmst::Graph2D::graphConstructTime (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_graph2_d_ad4756aa3f617493bd8b3f6ecfe099449}{}\label{classcmst_1_1_graph2_d_ad4756aa3f617493bd8b3f6ecfe099449}
+Return the time used for reconstructing the graph.
+
+When using CGAL library, the internal data structure is different from the one used in this program. So you need some conversion. 
+
+Here is the caller graph for this function:
+% FIG 11
+
+
+\index{cmst::Graph2D@{cmst::Graph2D}!initFather@{initFather}}
+\index{initFather@{initFather}!cmst::Graph2D@{cmst::Graph2D}}
+\subsubsection[{\texorpdfstring{initFather()}{initFather()}}]{\setlength{\rightskip}{0pt plus 5cm}void cmst::Graph2D::initFather (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classcmst_1_1_graph2_d_a5de76dfe02b4a13e0d3fe9a5e7ea7285}{}\label{classcmst_1_1_graph2_d_a5de76dfe02b4a13e0d3fe9a5e7ea7285}
+
+
+Initializes the father array for Union-\/find Sets structure. 
+
+
+
+Here is the caller graph for this function:
+% FIG 12
+
+
+\index{cmst::Graph2D@{cmst::Graph2D}!Kruskal@{Kruskal}}
+\index{Kruskal@{Kruskal}!cmst::Graph2D@{cmst::Graph2D}}
+\subsubsection[{\texorpdfstring{Kruskal()}{Kruskal()}}]{\setlength{\rightskip}{0pt plus 5cm}double cmst::Graph2D::Kruskal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classcmst_1_1_graph2_d_a034d2d37b2d106c0e25d7ad7bc67907e}{}\label{classcmst_1_1_graph2_d_a034d2d37b2d106c0e25d7ad7bc67907e}
+The Kruskal algorithm for finding the minimal spanning tree.
+
+Use the CGAL computed Delaunay Diagram. \begin{DoxyReturn}{Returns}
+The length of the MST. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function:
+% FIG 13
+
+
+
+
+Here is the caller graph for this function:
+% FIG 14
+
+
+\index{cmst::Graph2D@{cmst::Graph2D}!mstLength@{mstLength}}
+\index{mstLength@{mstLength}!cmst::Graph2D@{cmst::Graph2D}}
+\subsubsection[{\texorpdfstring{mstLength()}{mstLength()}}]{\setlength{\rightskip}{0pt plus 5cm}double cmst::Graph2D::mstLength (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_graph2_d_aea22c23fdbb3b9e91671562cb19730ed}{}\label{classcmst_1_1_graph2_d_aea22c23fdbb3b9e91671562cb19730ed}
+Return the length of the MST \begin{DoxyReturn}{Returns}
+Length of MST 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function:
+% FIG 15
+
+
+
+
+Here is the caller graph for this function:
+% FIG 16
+
+
+\index{cmst::Graph2D@{cmst::Graph2D}!mstTime@{mstTime}}
+\index{mstTime@{mstTime}!cmst::Graph2D@{cmst::Graph2D}}
+\subsubsection[{\texorpdfstring{mstTime()}{mstTime()}}]{\setlength{\rightskip}{0pt plus 5cm}int cmst::Graph2D::mstTime (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_graph2_d_a3b596946f310f7024036d2c6a18985a3}{}\label{classcmst_1_1_graph2_d_a3b596946f310f7024036d2c6a18985a3}
+Return the time used for computing MST, using Kruskal\textquotesingle{}s algorithm 
+
+Here is the call graph for this function:
+% FIG 17
+
+
+
+
+Here is the caller graph for this function:
+% FIG 18
+
+
+\index{cmst::Graph2D@{cmst::Graph2D}!naiveKruskal@{naiveKruskal}}
+\index{naiveKruskal@{naiveKruskal}!cmst::Graph2D@{cmst::Graph2D}}
+\subsubsection[{\texorpdfstring{naiveKruskal()}{naiveKruskal()}}]{\setlength{\rightskip}{0pt plus 5cm}double cmst::Graph2D::naiveKruskal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classcmst_1_1_graph2_d_af0db14845e80799be1d4fb15ca230110}{}\label{classcmst_1_1_graph2_d_af0db14845e80799be1d4fb15ca230110}
+The naive Kruskal algorithm.
+
+Construct all the edges in the graph, then run Kruskal. \begin{DoxyReturn}{Returns}
+The length of the MST. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function:
+% FIG 19
+
+
+
+
+Here is the caller graph for this function:
+% FIG 20
+
+
+\index{cmst::Graph2D@{cmst::Graph2D}!pointNum@{pointNum}}
+\index{pointNum@{pointNum}!cmst::Graph2D@{cmst::Graph2D}}
+\subsubsection[{\texorpdfstring{pointNum() const }{pointNum() const }}]{\setlength{\rightskip}{0pt plus 5cm}int cmst::Graph2D::pointNum (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_graph2_d_a0b18b38d5813b2fdbe8f5a8d6f92575d}{}\label{classcmst_1_1_graph2_d_a0b18b38d5813b2fdbe8f5a8d6f92575d}
+
+
+Return the number of points in this graph. 
+
+
+
+Here is the caller graph for this function:
+% FIG 21
+
+
+\index{cmst::Graph2D@{cmst::Graph2D}!print@{print}}
+\index{print@{print}!cmst::Graph2D@{cmst::Graph2D}}
+\subsubsection[{\texorpdfstring{print(std::string file=""graph.txt"")}{print(std::string file="graph.txt")}}]{\setlength{\rightskip}{0pt plus 5cm}bool cmst::Graph2D::print (
+\begin{DoxyParamCaption}
+\item[{std::string}]{file = {\ttfamily \char`\"{}graph.txt\char`\"{}}}
+\end{DoxyParamCaption}
+)}\hypertarget{classcmst_1_1_graph2_d_a0e0bafdd08a942ef01c66768b5021f09}{}\label{classcmst_1_1_graph2_d_a0e0bafdd08a942ef01c66768b5021f09}
+
+
+Print the graph information to file. 
+
+
+
+Here is the caller graph for this function:
+% FIG 22
+
+
+\index{cmst::Graph2D@{cmst::Graph2D}!printSTInfo@{printSTInfo}}
+\index{printSTInfo@{printSTInfo}!cmst::Graph2D@{cmst::Graph2D}}
+\subsubsection[{\texorpdfstring{printSTInfo()}{printSTInfo()}}]{\setlength{\rightskip}{0pt plus 5cm}void cmst::Graph2D::printSTInfo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_graph2_d_a547a65e56068434928777eb7b4e59510}{}\label{classcmst_1_1_graph2_d_a547a65e56068434928777eb7b4e59510}
+
+
+Print the information of the current spanning tree displayed. 
+
+
+
+Here is the caller graph for this function:
+% FIG 23
+
+
+\index{cmst::Graph2D@{cmst::Graph2D}!validateDone@{validateDone}}
+\index{validateDone@{validateDone}!cmst::Graph2D@{cmst::Graph2D}}
+\subsubsection[{\texorpdfstring{validateDone() const }{validateDone() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool cmst::Graph2D::validateDone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_graph2_d_ab7fbcf59b9ef4e9cc10015fd610cb4fc}{}\label{classcmst_1_1_graph2_d_ab7fbcf59b9ef4e9cc10015fd610cb4fc}
+
+
+Return if the MST has been validated. 
+
+
+
+Here is the caller graph for this function:
+% FIG 24
+
+
+
+
+\subsection{Member Data Documentation}
+\index{cmst::Graph2D@{cmst::Graph2D}!father@{father}}
+\index{father@{father}!cmst::Graph2D@{cmst::Graph2D}}
+\subsubsection[{\texorpdfstring{father}{father}}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$int$>$ cmst::Graph2D::father\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classcmst_1_1_graph2_d_ad5d251f2f6f8b827af4404985fcec53c}{}\label{classcmst_1_1_graph2_d_ad5d251f2f6f8b827af4404985fcec53c}
+
+
+Father array for Union-\/find Sets structure. 
+
+\index{cmst::Graph2D@{cmst::Graph2D}!m\_delaunay@{m\_delaunay}}
+\index{m\_delaunay@{m\_delaunay}!cmst::Graph2D@{cmst::Graph2D}}
+\subsubsection[{\texorpdfstring{m\_delaunay}{m_delaunay}}]{\setlength{\rightskip}{0pt plus 5cm}Delaunay cmst::Graph2D::m\_delaunay\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classcmst_1_1_graph2_d_af19557df59901e6078c2038652c95623}{}\label{classcmst_1_1_graph2_d_af19557df59901e6078c2038652c95623}
+
+
+CGAL data structure for storing and computing a Delaunay diagram. 
+
+\index{cmst::Graph2D@{cmst::Graph2D}!m\_delaunayEdge@{m\_delaunayEdge}}
+\index{m\_delaunayEdge@{m\_delaunayEdge}!cmst::Graph2D@{cmst::Graph2D}}
+\subsubsection[{\texorpdfstring{m\_delaunayEdge}{m_delaunayEdge}}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<${\bf IndexEdge2D}$>$ cmst::Graph2D::m\_delaunayEdge\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classcmst_1_1_graph2_d_a6fe64b2078ec3c700a8a2e2bd77e2dae}{}\label{classcmst_1_1_graph2_d_a6fe64b2078ec3c700a8a2e2bd77e2dae}
+
+
+Delaunay edges of the graph. 
+
+\index{cmst::Graph2D@{cmst::Graph2D}!m\_delaunayTime@{m\_delaunayTime}}
+\index{m\_delaunayTime@{m\_delaunayTime}!cmst::Graph2D@{cmst::Graph2D}}
+\subsubsection[{\texorpdfstring{m\_delaunayTime}{m_delaunayTime}}]{\setlength{\rightskip}{0pt plus 5cm}int cmst::Graph2D::m\_delaunayTime\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classcmst_1_1_graph2_d_a869a2fef63a6dbc8733056afd9ad0b71}{}\label{classcmst_1_1_graph2_d_a869a2fef63a6dbc8733056afd9ad0b71}
+
+
+Time used for computing the Delaunay diagram. 
+
+\index{cmst::Graph2D@{cmst::Graph2D}!m\_displaySTNum@{m\_displaySTNum}}
+\index{m\_displaySTNum@{m\_displaySTNum}!cmst::Graph2D@{cmst::Graph2D}}
+\subsubsection[{\texorpdfstring{m\_displaySTNum}{m_displaySTNum}}]{\setlength{\rightskip}{0pt plus 5cm}int cmst::Graph2D::m\_displaySTNum\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classcmst_1_1_graph2_d_aa5479777b7d8650b85c15b1f8a54bd95}{}\label{classcmst_1_1_graph2_d_aa5479777b7d8650b85c15b1f8a54bd95}
+\index{cmst::Graph2D@{cmst::Graph2D}!m\_edges@{m\_edges}}
+\index{m\_edges@{m\_edges}!cmst::Graph2D@{cmst::Graph2D}}
+\subsubsection[{\texorpdfstring{m\_edges}{m_edges}}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<${\bf IndexEdge2D}$>$ cmst::Graph2D::m\_edges\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classcmst_1_1_graph2_d_a31a6b042c1c1941ee59672b842c7d3c9}{}\label{classcmst_1_1_graph2_d_a31a6b042c1c1941ee59672b842c7d3c9}
+
+
+All possible edges in the graph. 
+
+\index{cmst::Graph2D@{cmst::Graph2D}!m\_graph@{m\_graph}}
+\index{m\_graph@{m\_graph}!cmst::Graph2D@{cmst::Graph2D}}
+\subsubsection[{\texorpdfstring{m\_graph}{m_graph}}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$std::vector$<$int$>$ $>$ cmst::Graph2D::m\_graph\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classcmst_1_1_graph2_d_a5df9c78edb4f5c68da11b01e44061dc5}{}\label{classcmst_1_1_graph2_d_a5df9c78edb4f5c68da11b01e44061dc5}
+
+
+Adjacency list of the Delaunay diagram of the graph. 
+
+\index{cmst::Graph2D@{cmst::Graph2D}!m\_graphConstructTime@{m\_graphConstructTime}}
+\index{m\_graphConstructTime@{m\_graphConstructTime}!cmst::Graph2D@{cmst::Graph2D}}
+\subsubsection[{\texorpdfstring{m\_graphConstructTime}{m_graphConstructTime}}]{\setlength{\rightskip}{0pt plus 5cm}int cmst::Graph2D::m\_graphConstructTime\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classcmst_1_1_graph2_d_ac594da90a2c9bd7332644532969ef11f}{}\label{classcmst_1_1_graph2_d_ac594da90a2c9bd7332644532969ef11f}
+
+
+Time used for reconstructing the graph. 
+
+\index{cmst::Graph2D@{cmst::Graph2D}!m\_mstDone@{m\_mstDone}}
+\index{m\_mstDone@{m\_mstDone}!cmst::Graph2D@{cmst::Graph2D}}
+\subsubsection[{\texorpdfstring{m\_mstDone}{m_mstDone}}]{\setlength{\rightskip}{0pt plus 5cm}bool cmst::Graph2D::m\_mstDone\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classcmst_1_1_graph2_d_ab7c087fe87b5750195100ff25f10f628}{}\label{classcmst_1_1_graph2_d_ab7c087fe87b5750195100ff25f10f628}
+
+
+If \hyperlink{classcmst_1_1_graph2_d_a034d2d37b2d106c0e25d7ad7bc67907e}{Kruskal()} has been called. 
+
+\index{cmst::Graph2D@{cmst::Graph2D}!m\_MSTEdge@{m\_MSTEdge}}
+\index{m\_MSTEdge@{m\_MSTEdge}!cmst::Graph2D@{cmst::Graph2D}}
+\subsubsection[{\texorpdfstring{m\_MSTEdge}{m_MSTEdge}}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<${\bf IndexEdge2D}$>$ cmst::Graph2D::m\_MSTEdge\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classcmst_1_1_graph2_d_a1cc96b5251162964ac21f46955ac8271}{}\label{classcmst_1_1_graph2_d_a1cc96b5251162964ac21f46955ac8271}
+
+
+MST edges of the graph. 
+
+\index{cmst::Graph2D@{cmst::Graph2D}!m\_mstLength@{m\_mstLength}}
+\index{m\_mstLength@{m\_mstLength}!cmst::Graph2D@{cmst::Graph2D}}
+\subsubsection[{\texorpdfstring{m\_mstLength}{m_mstLength}}]{\setlength{\rightskip}{0pt plus 5cm}double cmst::Graph2D::m\_mstLength\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classcmst_1_1_graph2_d_a722498b25b96d26e68e378ba970d5e65}{}\label{classcmst_1_1_graph2_d_a722498b25b96d26e68e378ba970d5e65}
+
+
+Length of the MST. 
+
+\index{cmst::Graph2D@{cmst::Graph2D}!m\_mstTime@{m\_mstTime}}
+\index{m\_mstTime@{m\_mstTime}!cmst::Graph2D@{cmst::Graph2D}}
+\subsubsection[{\texorpdfstring{m\_mstTime}{m_mstTime}}]{\setlength{\rightskip}{0pt plus 5cm}int cmst::Graph2D::m\_mstTime\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classcmst_1_1_graph2_d_a447f3d36666c57d2f15bddc1e3126f1e}{}\label{classcmst_1_1_graph2_d_a447f3d36666c57d2f15bddc1e3126f1e}
+
+
+Time used for computing the MST. 
+
+\index{cmst::Graph2D@{cmst::Graph2D}!m\_points@{m\_points}}
+\index{m\_points@{m\_points}!cmst::Graph2D@{cmst::Graph2D}}
+\subsubsection[{\texorpdfstring{m\_points}{m_points}}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<${\bf Point2D}$>$ cmst::Graph2D::m\_points\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classcmst_1_1_graph2_d_a32456f3c630e34a56ce3109183142c10}{}\label{classcmst_1_1_graph2_d_a32456f3c630e34a56ce3109183142c10}
+
+
+Points in the graph. 
+
+\index{cmst::Graph2D@{cmst::Graph2D}!m\_ST@{m\_ST}}
+\index{m\_ST@{m\_ST}!cmst::Graph2D@{cmst::Graph2D}}
+\subsubsection[{\texorpdfstring{m\_ST}{m_ST}}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<${\bf ST}$>$ cmst::Graph2D::m\_ST\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classcmst_1_1_graph2_d_a829dc681f90679478b0ba9676af0bc03}{}\label{classcmst_1_1_graph2_d_a829dc681f90679478b0ba9676af0bc03}
+
+
+Spanning trees of the graph. 
+
+\index{cmst::Graph2D@{cmst::Graph2D}!m\_validateDone@{m\_validateDone}}
+\index{m\_validateDone@{m\_validateDone}!cmst::Graph2D@{cmst::Graph2D}}
+\subsubsection[{\texorpdfstring{m\_validateDone}{m_validateDone}}]{\setlength{\rightskip}{0pt plus 5cm}bool cmst::Graph2D::m\_validateDone\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classcmst_1_1_graph2_d_ae609751f322449c3ac98303a8d6fa747}{}\label{classcmst_1_1_graph2_d_ae609751f322449c3ac98303a8d6fa747}
+
+
+If \hyperlink{classcmst_1_1_graph2_d_af0db14845e80799be1d4fb15ca230110}{naiveKruskal()} has been called. 
+

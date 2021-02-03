@@ -1,0 +1,4 @@
+<map id="cmst::Window::draw" name="cmst::Window::draw">
+<area shape="rect" id="node2" href="$classcmst_1_1_window.html#a6fc02b2afee52c0f71b6a3bd39c9210f" title="cmst::Window::height" alt="" coords="193,5,341,32"/>
+<area shape="rect" id="node3" href="$classcmst_1_1_window.html#a8c4d7788d1932e73397c20b7a9639d69" title="Record the height of current GLUT window. " alt="" coords="389,5,568,32"/>
+</map>

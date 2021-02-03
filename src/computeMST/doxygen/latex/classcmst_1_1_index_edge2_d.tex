@@ -1,0 +1,150 @@
+\hypertarget{classcmst_1_1_index_edge2_d}{}\section{cmst\+:\+:Index\+Edge2D Class Reference}
+\label{classcmst_1_1_index_edge2_d}\index{cmst\+::\+Index\+Edge2D@{cmst\+::\+Index\+Edge2D}}
+
+
+Edge with start and end point indices in an array.  
+
+
+
+
+Inheritance diagram for cmst\+:\+:Index\+Edge2D\+:
+% FIG 0
+
+
+Collaboration diagram for cmst\+:\+:Index\+Edge2D\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcmst_1_1_index_edge2_d_aace5c7209f868577cb353f309d4427fb}{Index\+Edge2D} ()
+\item 
+\hyperlink{classcmst_1_1_index_edge2_d_aa01ca9e529a319fffb5f500ab7218ef6}{Index\+Edge2D} (\hyperlink{classcmst_1_1_point2_d}{Point2D} p1, \hyperlink{classcmst_1_1_point2_d}{Point2D} p2, int index1, int index2)
+\item 
+int \hyperlink{classcmst_1_1_index_edge2_d_ab92c0b814ea9c354a71acfc84c871f72}{start\+Index} () const 
+\begin{DoxyCompactList}\small\item\em The index of the starting point. \end{DoxyCompactList}\item 
+int \hyperlink{classcmst_1_1_index_edge2_d_ad50c559d38e5857c03be255774deff12}{end\+Index} () const 
+\begin{DoxyCompactList}\small\item\em The index of the end point. \end{DoxyCompactList}\item 
+bool \hyperlink{classcmst_1_1_index_edge2_d_a96fc8ab0bb52c8c3aa8d5eed3a0034dd}{operator$<$} (const \hyperlink{classcmst_1_1_index_edge2_d}{Index\+Edge2D} \&right) const 
+\begin{DoxyCompactList}\small\item\em Compares edges by length. \end{DoxyCompactList}\item 
+bool \hyperlink{classcmst_1_1_index_edge2_d_a9b0f6b17a930986f99d30e03c34905c8}{operator$>$} (const \hyperlink{classcmst_1_1_index_edge2_d}{Index\+Edge2D} \&right) const 
+\begin{DoxyCompactList}\small\item\em Compares edges by length. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classcmst_1_1_index_edge2_d_a38fdada0cc5c0807ec7970cda8705428}{m\+\_\+index} \mbox{[}2\mbox{]}
+\begin{DoxyCompactList}\small\item\em Indices of the end points. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{classcmst_1_1_index_edge2_d_a07a17f57bc3f2f18232965531f0b62b4}{operator$<$$<$} (std\+::ostream \&str, const \hyperlink{classcmst_1_1_index_edge2_d}{Index\+Edge2D} \&e)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Edge with start and end point indices in an array. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{cmst\+::\+Index\+Edge2D@{cmst\+::\+Index\+Edge2D}!Index\+Edge2D@{Index\+Edge2D}}
+\index{Index\+Edge2D@{Index\+Edge2D}!cmst\+::\+Index\+Edge2D@{cmst\+::\+Index\+Edge2D}}
+\subsubsection[{\texorpdfstring{Index\+Edge2\+D()}{IndexEdge2D()}}]{\setlength{\rightskip}{0pt plus 5cm}cmst\+::\+Index\+Edge2\+D\+::\+Index\+Edge2D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_index_edge2_d_aace5c7209f868577cb353f309d4427fb}{}\label{classcmst_1_1_index_edge2_d_aace5c7209f868577cb353f309d4427fb}
+\index{cmst\+::\+Index\+Edge2D@{cmst\+::\+Index\+Edge2D}!Index\+Edge2D@{Index\+Edge2D}}
+\index{Index\+Edge2D@{Index\+Edge2D}!cmst\+::\+Index\+Edge2D@{cmst\+::\+Index\+Edge2D}}
+\subsubsection[{\texorpdfstring{Index\+Edge2\+D(\+Point2\+D p1, Point2\+D p2, int index1, int index2)}{IndexEdge2D(Point2D p1, Point2D p2, int index1, int index2)}}]{\setlength{\rightskip}{0pt plus 5cm}cmst\+::\+Index\+Edge2\+D\+::\+Index\+Edge2D (
+\begin{DoxyParamCaption}
+\item[{{\bf Point2D}}]{p1, }
+\item[{{\bf Point2D}}]{p2, }
+\item[{int}]{index1, }
+\item[{int}]{index2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_index_edge2_d_aa01ca9e529a319fffb5f500ab7218ef6}{}\label{classcmst_1_1_index_edge2_d_aa01ca9e529a319fffb5f500ab7218ef6}
+Store the edge as an undirected one. The two end points will be sorted according to indices. 
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+
+
+\subsection{Member Function Documentation}
+\index{cmst\+::\+Index\+Edge2D@{cmst\+::\+Index\+Edge2D}!end\+Index@{end\+Index}}
+\index{end\+Index@{end\+Index}!cmst\+::\+Index\+Edge2D@{cmst\+::\+Index\+Edge2D}}
+\subsubsection[{\texorpdfstring{end\+Index() const }{endIndex() const }}]{\setlength{\rightskip}{0pt plus 5cm}int cmst\+::\+Index\+Edge2\+D\+::end\+Index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_index_edge2_d_ad50c559d38e5857c03be255774deff12}{}\label{classcmst_1_1_index_edge2_d_ad50c559d38e5857c03be255774deff12}
+
+
+The index of the end point. 
+
+\index{cmst\+::\+Index\+Edge2D@{cmst\+::\+Index\+Edge2D}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!cmst\+::\+Index\+Edge2D@{cmst\+::\+Index\+Edge2D}}
+\subsubsection[{\texorpdfstring{operator$<$(const Index\+Edge2\+D \&right) const }{operator<(const IndexEdge2D &right) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool cmst\+::\+Index\+Edge2\+D\+::operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Index\+Edge2D} \&}]{right}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_index_edge2_d_a96fc8ab0bb52c8c3aa8d5eed3a0034dd}{}\label{classcmst_1_1_index_edge2_d_a96fc8ab0bb52c8c3aa8d5eed3a0034dd}
+
+
+Compares edges by length. 
+
+
+
+Here is the call graph for this function\+:
+% FIG 3
+
+
+\index{cmst\+::\+Index\+Edge2D@{cmst\+::\+Index\+Edge2D}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!cmst\+::\+Index\+Edge2D@{cmst\+::\+Index\+Edge2D}}
+\subsubsection[{\texorpdfstring{operator$>$(const Index\+Edge2\+D \&right) const }{operator>(const IndexEdge2D &right) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool cmst\+::\+Index\+Edge2\+D\+::operator$>$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Index\+Edge2D} \&}]{right}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_index_edge2_d_a9b0f6b17a930986f99d30e03c34905c8}{}\label{classcmst_1_1_index_edge2_d_a9b0f6b17a930986f99d30e03c34905c8}
+
+
+Compares edges by length. 
+
+
+
+Here is the call graph for this function\+:
+% FIG 4
+
+
+\index{cmst\+::\+Index\+Edge2D@{cmst\+::\+Index\+Edge2D}!start\+Index@{start\+Index}}
+\index{start\+Index@{start\+Index}!cmst\+::\+Index\+Edge2D@{cmst\+::\+Index\+Edge2D}}
+\subsubsection[{\texorpdfstring{start\+Index() const }{startIndex() const }}]{\setlength{\rightskip}{0pt plus 5cm}int cmst\+::\+Index\+Edge2\+D\+::start\+Index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcmst_1_1_index_edge2_d_ab92c0b814ea9c354a71acfc84c871f72}{}\label{classcmst_1_1_index_edge2_d_ab92c0b814ea9c354a71acfc84c871f72}
+
+
+The index of the starting point. 
+
+
+
+\subsection{Friends And Related Function Documentation}
+\index{cmst\+::\+Index\+Edge2D@{cmst\+::\+Index\+Edge2D}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!cmst\+::\+Index\+Edge2D@{cmst\+::\+Index\+Edge2D}}
+\subsubsection[{\texorpdfstring{operator$<$$<$}{operator<<}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{str, }
+\item[{const {\bf Index\+Edge2D} \&}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classcmst_1_1_index_edge2_d_a07a17f57bc3f2f18232965531f0b62b4}{}\label{classcmst_1_1_index_edge2_d_a07a17f57bc3f2f18232965531f0b62b4}
+
+
+\subsection{Member Data Documentation}
+\index{cmst\+::\+Index\+Edge2D@{cmst\+::\+Index\+Edge2D}!m\+\_\+index@{m\+\_\+index}}
+\index{m\+\_\+index@{m\+\_\+index}!cmst\+::\+Index\+Edge2D@{cmst\+::\+Index\+Edge2D}}
+\subsubsection[{\texorpdfstring{m\+\_\+index}{m_index}}]{\setlength{\rightskip}{0pt plus 5cm}int cmst\+::\+Index\+Edge2\+D\+::m\+\_\+index\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classcmst_1_1_index_edge2_d_a38fdada0cc5c0807ec7970cda8705428}{}\label{classcmst_1_1_index_edge2_d_a38fdada0cc5c0807ec7970cda8705428}
+
+
+Indices of the end points. 
+
